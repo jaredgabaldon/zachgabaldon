@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const metrics = [
+  { value: '$2M+', label: 'ARR portfolio managed across strategic enterprise accounts' },
+  { value: '94%', label: '3-year average gross revenue retention' },
+  { value: '$300K+', label: 'Expansion revenue generated since 2022' },
+  { value: '$80K', label: 'Expansion secured alongside a full 2026 renewal' }
+];
+
+const highlights = [
+  'Enterprise-focused strategic advisor to executive stakeholders with experience aligning media investment, performance strategy, and long-term account growth.',
+  'Cross-functional operator partnering with planning, ad products, traffic, product, and operations teams to turn customer success into a revenue engine.',
+  'Trusted by senior clients to lead QBRs, renewal strategy, portfolio planning, and high-stakes recovery work for at-risk accounts.'
+];
+
+const experience = [
+  {
+    role: 'Senior Customer Success Manager',
+    company: 'Hearst Media, including 46Mile',
+    location: 'San Francisco, CA',
+    period: 'Feb 2022 - Present',
+    bullets: [
+      'Lead full-lifecycle revenue strategy and digital transformation planning for C-level stakeholders, directing omni-channel investments to maximize portfolio growth.',
+      'Manage a $2M+ portfolio across four strategic accounts, including a $1.5M anchor account, while maintaining a 94% average gross revenue retention rate.',
+      'Generated $300K+ in expansion revenue through structured forecasting, risk mitigation planning, and data-backed growth roadmaps.',
+      'Reversed churn risk on a $257K enterprise account, rebuilding executive alignment to secure a full 2026 renewal plus $80K in expansion revenue.',
+      'Run executive QBRs and performance strategy sessions focused on KPI alignment, budget optimization, and renewal predictability.'
+    ]
+  },
+  {
+    role: 'Advertising Project Manager',
+    company: 'Park Advertising: PERM Advertising Agency',
+    location: 'New York City, NY',
+    period: 'Apr 2021 - Feb 2022',
+    bullets: [
+      'Managed high-compliance partnerships for major legal firms, ensuring 100% adherence to complex PERM advertising regulations.',
+      'Oversaw a high-velocity monthly pipeline of 60 to 70 cases while maintaining strong quality and workflow discipline in a fast-paced environment.',
+      'Balanced partner success, project execution, and operational rigor across a demanding client portfolio.'
+    ]
+  }
+];
+
+const toolkit = [
+  'Salesforce',
+  'Monday.com',
+  'Asana',
+  'Naviga',
+  'GA4',
+  'GTM',
+  'Tapclicks',
+  'Gamma',
+  'Canva',
+  'Adobe Suite'
+];
+
+const education = [
+  'Bachelor\'s Degree in Marketing, University of Utah David Eccles School of Business, 2021',
+  'Associate of Science, Weber State University, 2017'
+];
+
+const title = 'Zachery Gabaldon | Senior Strategic Customer Success Manager';
+const description = 'Portfolio site for Zachery Gabaldon, a senior strategic customer success manager focused on enterprise growth, retention, and executive advisory work.';
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="page-shell">
+    <section class="hero panel">
+      <div class="hero-copy">
+        <p class="eyebrow">Zachery Gabaldon</p>
+        <h1>Customer success leadership built for complex revenue conversations.</h1>
+        <p class="lede">
+          Senior Strategic Customer Success Manager partnering with executive stakeholders to grow enterprise portfolios,
+          stabilize high-risk accounts, and turn customer relationships into durable revenue.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/zach-gabaldon-resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+          <a class="button button-secondary" href="mailto:zacherygabaldon@outlook.com">Get In Touch</a>
+        </div>
+        <div class="contact-row" aria-label="Contact details">
+          <span>(801) 719-9719</span>
+          <span>zacherygabaldon@outlook.com</span>
+          <span>San Francisco, CA</span>
+          <a href="https://www.linkedin.com/in/zachery-gabaldon/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <p class="card-kicker">Current focus</p>
+        <h2>Enterprise retention, growth, and strategic advisory</h2>
+        <p>
+          Zach works at the intersection of account strategy, performance storytelling, and cross-functional execution,
+          helping clients make sharper investment decisions while giving internal teams a clear path to delivery.
+        </p>
+      </aside>
+    </section>
+
+    <section class="metrics-grid">
+      {metrics.map((metric) => (
+        <article class="metric panel">
+          <p class="metric-value">{metric.value}</p>
+          <p class="metric-label">{metric.label}</p>
+        </article>
+      ))}
+    </section>
+
+    <section class="content-grid">
+      <div class="main-column">
+        <section class="panel section-block">
+          <p class="section-label">Professional Summary</p>
+          <div class="summary-list">
+            {highlights.map((item) => <p>{item}</p>)}
+          </div>
+        </section>
+
+        <section class="panel section-block">
+          <p class="section-label">Experience</p>
+          <div class="timeline">
+            {experience.map((job) => (
+              <article class="timeline-item">
+                <div class="timeline-heading">
+                  <div>
+                    <h2>{job.role}</h2>
+                    <p class="timeline-company">{job.company}</p>
+                  </div>
+                  <div class="timeline-meta">
+                    <p>{job.location}</p>
+                    <p>{job.period}</p>
+                  </div>
+                </div>
+                <ul>
+                  {job.bullets.map((bullet) => <li>{bullet}</li>)}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="panel section-block">
+          <p class="section-label">Toolkit</p>
+          <div class="tag-list">
+            {toolkit.map((item) => <span>{item}</span>)}
+          </div>
+        </section>
+
+        <section class="panel section-block">
+          <p class="section-label">What I Bring</p>
+          <ul class="compact-list">
+            <li>Executive stakeholder management</li>
+            <li>Renewal and expansion strategy</li>
+            <li>Portfolio forecasting and retention planning</li>
+            <li>Cross-functional leadership</li>
+            <li>QBR design and performance storytelling</li>
+            <li>Digital media and omni-channel planning</li>
+          </ul>
+        </section>
+
+        <section class="panel section-block">
+          <p class="section-label">Education</p>
+          <ul class="compact-list">
+            {education.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+      </aside>
+    </section>
+  </main>
+</BaseLayout>
