@@ -59,6 +59,13 @@ const education = [
   'Associate of Science, Weber State University, 2017'
 ];
 
+const heroStats = [
+  { value: '4', label: 'Strategic accounts managed' },
+  { value: '2022', label: 'Leading enterprise CS work since' },
+  { value: 'QBRs', label: 'Executive performance sessions' },
+  { value: 'Omni', label: 'Channel planning mindset' }
+];
+
 const title = 'Zachery Gabaldon | Senior Strategic Customer Success Manager';
 const description = 'Portfolio site for Zachery Gabaldon, a senior strategic customer success manager focused on enterprise growth, retention, and executive advisory work.';
 ---
@@ -78,19 +85,31 @@ const description = 'Portfolio site for Zachery Gabaldon, a senior strategic cus
           <a class="button button-secondary" href="mailto:zacherygabaldon@outlook.com">Get In Touch</a>
         </div>
         <div class="contact-row" aria-label="Contact details">
-          <span>(801) 719-9719</span>
           <span>zacherygabaldon@outlook.com</span>
           <span>San Francisco, CA</span>
           <a href="https://www.linkedin.com/in/zachery-gabaldon/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
-      <aside class="hero-card">
-        <p class="card-kicker">Current focus</p>
-        <h2>Enterprise retention, growth, and strategic advisory</h2>
-        <p>
-          Zach works at the intersection of account strategy, performance storytelling, and cross-functional execution,
-          helping clients make sharper investment decisions while giving internal teams a clear path to delivery.
-        </p>
+      <aside class="hero-rail">
+        <section class="hero-card">
+          <p class="card-kicker">Current focus</p>
+          <h2>Enterprise retention, growth, and strategic advisory</h2>
+          <p>
+            I work at the intersection of account strategy, performance storytelling, and cross-functional execution,
+            helping clients make sharper investment decisions while giving internal teams a clear path to delivery.
+          </p>
+        </section>
+        <section class="hero-mini panel">
+          <p class="section-label">At A Glance</p>
+          <div class="hero-stat-grid">
+            {heroStats.map((stat) => (
+              <article>
+                <p>{stat.value}</p>
+                <span>{stat.label}</span>
+              </article>
+            ))}
+          </div>
+        </section>
       </aside>
     </section>
 
