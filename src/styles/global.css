@@ -104,6 +104,7 @@ h1 {
 .hero-copy {
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .hero-rail {
@@ -113,6 +114,7 @@ h1 {
   grid-template-rows: 1fr auto;
   gap: 1rem;
   min-height: 100%;
+  min-width: 0;
 }
 
 .lede,
@@ -189,6 +191,8 @@ h1 {
   border-radius: var(--radius-lg);
   background: linear-gradient(180deg, rgba(157, 61, 31, 0.92), rgba(111, 36, 16, 0.94));
   color: #fff6ee;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .hero-card .card-kicker,
@@ -199,17 +203,21 @@ h1 {
 .hero-card h2 {
   margin-bottom: 0.9rem;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
-  line-height: 1.08;
+  line-height: 1.14;
+  overflow-wrap: anywhere;
 }
 
 .hero-card p {
   margin: 0;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .hero-mini {
   padding: 1.2rem;
   border-radius: var(--radius-lg);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .hero-stat-grid {
@@ -370,9 +378,24 @@ h1 {
     padding: 1.2rem;
   }
 
+  .hero-card,
+  .hero-mini {
+    padding: 1.1rem;
+  }
+
   h1 {
     max-width: none;
     font-size: clamp(2.6rem, 14vw, 4rem);
+  }
+
+  .hero-card h2 {
+    font-size: clamp(1.45rem, 6.5vw, 1.9rem);
+  }
+
+  .hero-card,
+  .hero-mini,
+  .hero-stat-grid article {
+    min-width: 0;
   }
 
   .contact-row {
