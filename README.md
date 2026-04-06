@@ -14,3 +14,5 @@ npm run preview
 ## Resume asset
 
 The resume PDF is available at `public/zach-gabaldon-resume.pdf`.
+
+Zach edit
